@@ -1,4 +1,9 @@
+<<<<<<< HEAD
 .DS_Store
+=======
+test
+notebooks/.ipynb_checkpoints
+>>>>>>> 5e7c71f865281bbb9f3911dae59e70c226643130
 ## Core latex/pdflatex auxiliary files:
 *.aux
 *.lof
