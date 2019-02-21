@@ -1,6 +1,6 @@
 \documentclass[a4paper, 11pt]{book}
-%!TeX TS-program = Lualatex 
-%!TeX encoding = UTF-8 Unicode 
+%!TeX TS-program = Lualatex
+%!TeX encoding = UTF-8 Unicode
 %!TeX spellcheck = en-US
 % !BIB TS-program = bibtex
 %\documentclass[draft,english]{book}
@@ -15,7 +15,7 @@ Aix Marseille Universit\'e, CNRS \\
 13385 Marseille Cedex 05,
 France}
 \newcommand{\PhoneA}{+33.491 324 044}%
-\newcommand{\Website}{http://invibe.net/LaurentPerrinet}%
+\newcommand{\Website}{https://laurentperrinet.github.io}%
 \newcommand{\Email}{Laurent.Perrinet@univ-amu.fr}%
 \newcommand{\Title}{Sparse models for Computer Vision}%
 \newcommand{\Abstract}{
@@ -41,7 +41,7 @@ sparse models being one simple and efficient instance of such schemes.
 }%
 \newcommand{\Keywords}{sparse coding; sparse hebbian learning; natural scene statistics; sparselets; lateral connections; association field}%
 \newcommand{\Acknowledgments}{%
-The author was supported by EC IP project FP7-269921, ``BrainScaleS''. 
+The author was supported by EC IP project FP7-269921, ``BrainScaleS''.
 Correspondence and requests for materials should be addressed to the author\footnote{\Email }.
 Code and supplementary material available at \url{\Website/Publications/Perrinet15bicv}. %
 }%
@@ -74,7 +74,7 @@ Code and supplementary material available at \url{\Website/Publications/Perrinet
 \author{Perrinet}\title{\Title}
 \usepackage{fancyhdr}
 \pagestyle{fancy}
-\rhead{\href{https://www.invibe.net/LaurentPerrinet/Publications/Perrinet15bicv}{doi:10.1002/9783527680863.ch14}}
+\rhead{\href{https://laurentperrinet.github.io/publication/perrinet-15-bicv}{doi:10.1002/9783527680863.ch14}}
 \lhead{Perrinet (2015) \emph{Sparse models}}
 
 %\includeonly{}
@@ -150,7 +150,7 @@ This chapter appeared as~\citep{Perrinet15sparse}:
 	isbn = {9783527680863},
 	title = {Sparse Models for Computer Vision},
 	DOI = {10.1002/9783527680863.ch14},
-    url={https://www.invibe.net/LaurentPerrinet/Publications/Perrinet15bicv},
+    url={https://laurentperrinet.github.io/publication/perrinet-15-bicv},
     publisher = {Wiley-VCH Verlag GmbH {\&} Co. KGaA},
 	booktitle = {Biologically inspired computer vision},
 	Year = {2015}
@@ -179,7 +179,7 @@ This chapter appeared as~\citep{Perrinet15sparse}:
 %%------------------------------%
 % \showthe\columnwidth
 
-% bio: fundamental question = why sparseness in V1 ? 	 
+% bio: fundamental question = why sparseness in V1 ?
 The central nervous system is a dynamical, adaptive organ
 which constantly evolves to provide optimal decisions\footnote{Decisions are defined in their broader sense of elementary choices operated in the system at associative or motor levels~\citep{Friston12}.} for interacting with the environment.
 The early visual pathways provides with a powerful system for probing and modeling these mechanisms.
@@ -210,10 +210,10 @@ For instance, the representation produced by the neural activity in V1 is sparse
 It is believed that this reduces redundancies
 and allows to better segregate edges in the image~\citep{Field94,Froudarakis14}.
 % Population code in mouse V1 facilitates readout of natural scenes through increased sparseness  Froudarakis14
-This optimization is operated given biological constraints, 
-such as the limited bandwidth of information transfer to higher processing stages 
+This optimization is operated given biological constraints,
+such as the limited bandwidth of information transfer to higher processing stages
 or the limited amount of metabolic resources (energy or wiring length).
-More generally it allows to increase the storage capacity of associative memories 
+More generally it allows to increase the storage capacity of associative memories
 before memory patterns start to interfere with each other~\citep{Palm13}.
 Moreover, it is now widely accepted that this redundancy reduction
 is achieved in a neural population through lateral interactions.
@@ -228,7 +228,7 @@ applying such a paradigm therefore seems a promising approach towards more biomi
 It is believed that such a property reflects the efficient match of the representation
 with the statistics of natural scenes, that is, to behaviorally relevant sensory inputs.
 Indeed, sparse representations are prominently observed for cortical responses to natural stimuli~\citep{Field87,Vinje00,Deweese03,Baudot13}.
-As the function of neural systems mostly emerges from unsupervised learning, 
+As the function of neural systems mostly emerges from unsupervised learning,
 it follows that these are adapted to the input which are behaviorally the most common and important.
 More generally, by being adapted to natural scenes, this shows that
 sparseness is a neural signature of an underlying optimization process.
@@ -240,7 +240,7 @@ ambiguities (such as inferring a three dimensional slant from a bi-dimensional r
 Also, the system has to compensate for inevitable delays, such as the delay from light stimulation to activation in V1 which is estimated to be of 50~\ms\ in humans.
 For instance, a tennis ball moving at 20~\si{\meter\per\second} at one meter in the frontal plane
 elicits an input activation in V1 corresponding to  around 45\si{\degree} of visual angle
-behind its physical position~\citep{PerrinetAdamsFriston14}. 
+behind its physical position~\citep{PerrinetAdamsFriston14}.
 Thus, to be able to translate such knowledge to the computer vision community,
 it is crucial to better understand \emph{why} the neural processes that produce sparse coding are efficient.
 %
@@ -280,7 +280,7 @@ A positive kurtosis measures if this distribution has an ``heavier tail'' than a
 A more general approach is to derive a representation cost.
 For instance, learning is accomplished in the \sparsenet\ algorithmic framework~\citep{Olshausen97}
 on image patches taken from natural images as a sequence of coding and learning steps.
-First, sparse coding is achieved using a gradient descent over a convex cost. 
+First, sparse coding is achieved using a gradient descent over a convex cost.
 We will see later in this chapter how this cost is derived from a prior  on the probability distribution function of the coefficients and how it favors the sparseness of the representation.
 At this step, the coding is performed using the current state of the ``dictionary'' of receptive fields.
 Then, knowing this sparse solution,
@@ -362,7 +362,7 @@ where $\mathbf{n}$ is a Gaussian additive noise image. This noise, as in~\citep{
 Using the GLM, we will infer the ``best'' coding vector as the most probable. In particular, from the physics of the synthesis of natural images, we know \emph{a priori} that image representations are sparse: They are most likely generated by a small number of features relatively to the dimension $M$ of the representation space. % (see Figure~\ref{fig:inspiration}-C).
 Similarly to \citet{Lewicki00}, this can be formalized in the probabilistic framework defined by the GLM (see~\seeEq{lgm}), by assuming that knowing the prior distribution of the coefficients $a_i$ for natural images, the representation cost of $\coef$ for one given natural image is:%
 \begin{eqnarray}%
-\mathcal{C}( \coef | \image , \dico) 	&\eqdef& -\log P( \coef | \image , \dico) 
+\mathcal{C}( \coef | \image , \dico) 	&\eqdef& -\log P( \coef | \image , \dico)
 =  \log P( \image )  -\log P( \image | \coef , \dico) -  \log P(\coef | \dico) \nonumber \\
 &=& \log P( \image ) + \frac{1}{2\sigma_n^2} \| \image - \dico \coef \|^2 - \sum_i \log P(a_i | \dico)%
 \label{eq:efficiency_cost}%
@@ -375,8 +375,8 @@ In practice, the sparseness of coefficients for natural images is often defined 
 \mathcal{C}_1( \coef | \image , \dico) =\frac{1}{2\sigma_n^2} \| \image - \dico \coef \|^2 + \beta \sum_i \log ( 1 + \frac{a_i^2}{\sigma^2} )%
 \label{eq:sparse_cost}%
 \end{equation}
-where $\beta$ corresponds to the steepness of the prior and $\sigma$ to its scaling (see Figure 13.2 from~\citep{Olshausen02}). This choice is often favored because it results in a convex cost for which known numerical optimization methods such as conjugate gradient may be used. In particular, these terms may be put in parallel to regularization terms that are used in computer vision. For instance, a L2-norm penalty term corresponds to Tikhonov regularization~\citep{Tikhonov77} or a L1-norm term corresponds to the Lasso method. 
-See chapter \verb+003_holly_gerhard+ for a review of possible parametrization of this norm, 
+where $\beta$ corresponds to the steepness of the prior and $\sigma$ to its scaling (see Figure 13.2 from~\citep{Olshausen02}). This choice is often favored because it results in a convex cost for which known numerical optimization methods such as conjugate gradient may be used. In particular, these terms may be put in parallel to regularization terms that are used in computer vision. For instance, a L2-norm penalty term corresponds to Tikhonov regularization~\citep{Tikhonov77} or a L1-norm term corresponds to the Lasso method.
+See chapter \verb+003_holly_gerhard+ for a review of possible parametrization of this norm,
 for instance by using nested $L_p$ norms.
 Classical implementation of sparse coding rely therefore on a parametric measure of sparseness.
 
@@ -748,7 +748,7 @@ We controlled the quality of the reconstruction from the edge information such
 that the residual energy is less than $3\%$ over the whole set of images,
 a criterion met on average when identifying $2048$ edges per image for images of size $256\times 256$ (that is, a relative sparseness of $\approx 0.01\%$ of activated coefficients).
 \textsf{(B)}~Efficiency for different image sizes as measured by the decrease of the residual's energy as a function of the coding cost
-%ratio of active coefficients 
+%ratio of active coefficients
 (relative $\ell_0$ pseudo-norm).
 \textsf{(B,~inset)}~%Similarly to Figure~\ref{fig:sparsenet}, the decrease of coefficients follows a power-law.
 %We compared the strength of this power-law on a image-per-image basis (as shown by the error bars) as a function of the image size.
@@ -774,7 +774,7 @@ To compare the strength of the sparseness in these full-scale images
 compared to the image patches discussed above (see Section~\ref{sec:sparsenet}),
 we measured the sparseness values obtained in images of different sizes.
 To be comparable, we measured the efficiency with respect to the relative $\ell_0$ pseudo-norm in bits per unit of image surface (pixel):
-This is defined as the ratio of active coefficients times the numbers of bits required to code for each coefficient (that is, $\log_2(M)$, where $M$ is total number of coefficients in the representation) over the size of the image. 
+This is defined as the ratio of active coefficients times the numbers of bits required to code for each coefficient (that is, $\log_2(M)$, where $M$ is total number of coefficients in the representation) over the size of the image.
 For different image and framework sizes, the lower this ratio, the higher the sparseness.
 As shown in Figure~\ref{fig:SparseLets}-B,
 we indeed see that sparseness increases relative to an increase in image size.
@@ -898,7 +898,7 @@ Then, we use these point non-linearities $z_i$ to sample orientation space in an
 \draw [anchor=south west] (.666\textwidth, .333\textwidth) node {$\mathsf{(C
 )}$};
 \end{tikzpicture}}
-\caption{ {\bf Including prior knowledge on the orientation of edges in natural images.}  \textsf{(A)}~Statistics of orientations in the database of natural images as shown by a polar bar histogram (the surface of wedges is proportional to occurrences). As for Figure~\ref{fig:laughlin}-A, this shows that orientations around cardinals are more likely than others (the dotted red line shows the average occurrence rate). \textsf{(B)}~ We show the histogram with the new set of orientations that has been used. Each bin is selected approximately uniformly. Note the variable width of bins. 
+\caption{ {\bf Including prior knowledge on the orientation of edges in natural images.}  \textsf{(A)}~Statistics of orientations in the database of natural images as shown by a polar bar histogram (the surface of wedges is proportional to occurrences). As for Figure~\ref{fig:laughlin}-A, this shows that orientations around cardinals are more likely than others (the dotted red line shows the average occurrence rate). \textsf{(B)}~ We show the histogram with the new set of orientations that has been used. Each bin is selected approximately uniformly. Note the variable width of bins.
 \textsf{(C)}~We compare the efficiency of the modified algorithm where the sampling is optimized thanks to histogram equalization described in Figure~\ref{fig:laughlin} as the average residual energy with respect to the number of edges. %  (in the inset, we similarly plot sorted coefficients).
 This shows that  introducing a prior information on the distribution of orientations in the algorithm may also introduce a slight but insignificant improvement in the sparseness. % (of the order of $5\%$) and therefore in the efficiency of the representation.
 \label{fig:firstorder}}%
@@ -911,7 +911,7 @@ It is important to note that the MP algorithm is non-linear and the choice of on
 In particular, while orientations around cardinals are more prevalent in natural images (see Figure~\ref{fig:firstorder}-A), the output histogram of detected edges is uniform (see Figure~\ref{fig:firstorder}-B). %and these were detected with a better precision.
 To quantify the gain in efficiency, we measured the residual energy in the SparseLets framework with or without including this prior knowledge. Results show that for a similar number of extracted edges, residual energy is not significantly changed (see Figure~\ref{fig:firstorder}-C).
 This is again due to the exponential convergence of the squared error~\citep[p.~422]{Mallat98} on the space spanned by the representation basis.
-As the tiling of the Fourier space by the set of filters is complete, 
+As the tiling of the Fourier space by the set of filters is complete,
 one is assured of the convergence of the representation in both cases.
 %This indicates that in general, representation is more sparse and therefore that it better reflects the physical representation of the synthesis of images.
 %Moreover, this measures only accounts for the residual energy as a function of the number of coefficients.
@@ -1053,7 +1053,7 @@ Knowing the probability of co-occurences $p ( \pi_\ast | \pi_i)$ from the statis
 \mathcal{C}(\pi_\ast | \image, \mathcal{I}) = \frac{1}{2\sigma_n^2} \| \image - a_\ast \Phi_\ast \|^2  - \eta \sum_{i\in \mathcal{I}} \| a_i \| \cdot \log p ( \pi_\ast | \pi_i)%
 \label{eq:efficiency_cooc}%
 \end{eqnarray}%
-where $\eta$ quantifies the strength of this prediction. 
+where $\eta$ quantifies the strength of this prediction.
 Basically, this shows that, similarly to the association field proposed by~\citep{Grossberg84} which was subsequently observed in cortical neurons~\citep{vonderHeydt84} and applied by~\citep{Field93},
 we facilitate the activity of edges knowing the list of edges that were already extracted.
 This comes as a complementary local interaction to the inhibitory local interaction implemented in the Pursuit step (see Equation~\ref{eq:mp0})
@@ -1114,9 +1114,9 @@ Our novel implementation provides with a rapid and efficient solution that we il
 \end{tikzpicture}}
 
 \caption{{\bf Application to rapid contour segmentation}
-We applied the original sparse edge framework to \textsf{(A)}~the synthetic image of a circle embedded in noise. This noise is synthesized by edges at random positions, orientations and scales with a similar first-order statistics as natural scenes. % in~\citep[Fig.~7A]{Geisler01}. 
+We applied the original sparse edge framework to \textsf{(A)}~the synthetic image of a circle embedded in noise. This noise is synthesized by edges at random positions, orientations and scales with a similar first-order statistics as natural scenes. % in~\citep[Fig.~7A]{Geisler01}.
 \textsf{(B)} We overlay in red the set of edges which were detected by the SparseLets framework.
-\textsf{(C)}  Then, we have introduced second-order information in the evaluation of the probability in the sparse edges framework (with $\eta=0.15$). This modified the sequence of extracted edges as shown in blue. There is a clear match of the  edge extraction with the circle, as would be predicted by psychophysical results of hand segmentation of contours. % (figure modified from~\citep[Fig.~7B]{Geisler01}). 
+\textsf{(C)}  Then, we have introduced second-order information in the evaluation of the probability in the sparse edges framework (with $\eta=0.15$). This modified the sequence of extracted edges as shown in blue. There is a clear match of the  edge extraction with the circle, as would be predicted by psychophysical results of hand segmentation of contours. % (figure modified from~\citep[Fig.~7B]{Geisler01}).
 This shows that second-order information as introduced in this feed-forward chain  may be sufficient to account for contour grouping and may not necessitate a recursive chain rule such as implemented in~\citet{Geisler01}.
 \label{fig:segmentation}}%
 \end{figure}%
@@ -1131,7 +1131,7 @@ We may use the previous application of our algorithm to evaluate the probability
 %\label{eq:seg_cooc}%
 %\end{eqnarray}%
 %Such an equation is solved iteratively by starting with a uniform distribution for the distribution $ p ( j \in \mathcal{S} )$.
-We show in Figure~\ref{fig:segmentation} the application of such a formula (in panel C versus classical sparse edge extraction in panel B) on a synthetic image of a circle embedded in noise (panel A). %used by~\citep[Fig.~7A]{Geisler01}. 
+We show in Figure~\ref{fig:segmentation} the application of such a formula (in panel C versus classical sparse edge extraction in panel B) on a synthetic image of a circle embedded in noise (panel A). %used by~\citep[Fig.~7A]{Geisler01}.
 It shows that, while some edges from the background are extracted in the plain SparseLets framework (panel B), edges belonging to the same circular contour pop-out from the computation similarly to a chain rule (panel C).
 %This replicates the results of~\citep{Geisler01} and gives a constructive and simple implementation for this rule.
 %
@@ -1172,7 +1172,7 @@ More generally, it shows that simple feed-forward algorithms such as the one we 
 %
 
 In this chapter, we have shown sparse models at increasing structural complexities mimicking the key features of the primary visual cortex in primates.
-By focusing on a concrete example, the SparseLets framework, we have shown that sparse models provide 
+By focusing on a concrete example, the SparseLets framework, we have shown that sparse models provide
 an efficient framework for biologically-inspired computer vision algorithms.
 In particular, by including contextual information, such as prior statistics on natural images, we could improve
 the efficiency of the sparseness of the representation.
