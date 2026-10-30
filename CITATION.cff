@@ -1,0 +1,28 @@
+cff-version: 1.2.0
+message: If you use this software, please cite the accompanying publication (preferred-citation below).
+type: software
+title: Sparse Models for Computer Vision
+authors:
+- family-names: Perrinet
+  given-names: Laurent U
+  orcid: https://orcid.org/0000-0002-9536-010X
+repository-code: https://github.com/bicv/Perrinet2015BICV_sparse
+url: https://laurentperrinet.github.io/publication/perrinet-15-bicv/
+license: GPL-3.0
+keywords:
+- bayesian-modelling
+- primary-visual-cortex
+- sparse-coding
+preferred-citation:
+  type: generic
+  title: Sparse Models for Computer Vision
+  authors:
+  - family-names: Perrinet
+    given-names: Laurent U
+    orcid: https://orcid.org/0000-0002-9536-010X
+  collection-title: Biologically Inspired Computer Vision
+  publisher:
+    name: Wiley-VCH Verlag GmbH and Co. KGaA
+  doi: 10.1002/9783527680863.ch14
+  year: 2015
+  url: https://laurentperrinet.github.io/publication/perrinet-15-bicv/
